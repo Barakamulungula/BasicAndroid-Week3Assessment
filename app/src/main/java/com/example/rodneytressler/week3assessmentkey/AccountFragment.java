@@ -28,9 +28,22 @@ public class AccountFragment extends Fragment {
     @BindView(R.id.class_input)
     protected EditText classInput;
 
+    private CallBack callBack;
+
     @OnClick(R.id.button_finish)
     protected void onFinishButtonClicked(View view) {
-
+        if(!nameInput.getText().toString().isEmpty() && !classInput.getText().toString().isEmpty()){
+            String accountClass = classInput.getText().toString();
+            String name = nameInput.getText().toString();
+            if(accountClass.trim().equalsIgnoreCase("mage") || accountClass.trim().equalsIgnoreCase("warrior")
+                    || accountClass.trim().equalsIgnoreCase("archer")){
+                callBack.createAccount(new Account(name,accountClass));
+            }else{
+                showAlertDialog("class must be equal to  ‘warrior’, ‘mage’, or ‘archer’");
+            }
+        }else{
+            showAlertDialog("all inputs must be entered");
+        }
     }
 
 
@@ -71,5 +84,13 @@ public class AccountFragment extends Fragment {
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+    }
+
+    public void setCallBack(CallBack callBack) {
+        this.callBack = callBack;
+    }
+
+    public interface CallBack{
+        void createAccount(Account account);
     }
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BasicAndroid-Week3-Assessment.iml" filepath="$PROJECT_DIR$/.idea/BasicAndroid-Week3-Assessment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BasicAndroid-Week3Assessment.iml" filepath="$PROJECT_DIR$/BasicAndroid-Week3Assessment.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BasicAndroid-Week3Assessment.iml" filepath="$PROJECT_DIR$/.idea/BasicAndroid-Week3Assessment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Week3AssessmentKey.iml" filepath="$PROJECT_DIR$/Week3AssessmentKey.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
